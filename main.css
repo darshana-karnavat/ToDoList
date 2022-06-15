@@ -1,4 +1,34 @@
-/* .a-content-center {
-    display: flex;
-    justify-content: center;
-} */
+.s-tasks {
+    color: blue;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  
+  .s-h2 {
+    font-family: monospace;
+    color: white;
+    text-align: center;
+  }
+  
+  .delete {
+    background-color: rgba(17, 94, 228, 0.654);
+    color: white;
+  }
+  
+  .edit {
+    background-color: rgba(17, 94, 228, 0.654);
+    color: white;
+  }
+  
+  .edit:hover,
+  .delete:hover {
+    background-color: blue;
+  }
+  
+  form {
+    margin-top: 30px;
+  }
+  
+  h2 {
+    padding-top: 10px;
+  }
+  
