@@ -17,18 +17,46 @@
     ></script>
     <link rel="stylesheet" href="./main.css" />
     <title>Task List 2021</title>
-
-    <link rel="stylesheet" href="main.css" />
+<!-- WHY DOUBLE STYLESHEET?? also why 2021 and not 2022-->
+    <link rel="stylesheet" href="main.css" /> 
   </head>
   <body>
     <div class="container">
       <h1 class="text-center bg-danger p-2">ToDo Monster</h1>
+      <!-- maybe change the name ToDo Munster oder Muster -->
       <div class="row">
         <div id="darshana" class="col-lg-6 bg-warning" style="min-height: 400px">darshana</div>
         <div id="linde" class="col-lg-6 bg-info" style="min-height: 400px">linde</div>
       </div>
       <div class="row">
-        <div id="stefano" class="col-lg-6 bg-primary" style="min-height: 400px">stefano</div>
+        <div id="stefano" class="col-lg-6 bg-primary d-flex flex-column
+        align-items-center" style="min-height: 400px">
+          
+          <form id="new-task-form">
+            <!-- created form variable in JS also from input>id we create input variable -->
+            <input
+              type="text"
+              name="new-task-input"
+              id="new-task-input"
+              placeholder="Plan something" />
+            <input
+              type="submit"
+              id="new-task-submit"
+              value="Add new task" />
+          </form>
+        </header>
+        <main>
+          <section class="task-list">
+            <h2 class="s-h2">Tasks</h2>
+            <!-- from/into the below task id we create list_el -->
+            <div id="tasks">
+
+            </div>
+          </section>
+        </main>
+        <!-- STEFANO ABOVE -->
+        
+        </div>
         <div id="alex" class="col-lg-6 bg-success" style="min-height: 400px">
           <input type="text" id="fname" name="fname" />
           <button type="submit" id="add_button">Add</button>
@@ -38,6 +66,6 @@
       </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
