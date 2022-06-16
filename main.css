@@ -32,3 +32,11 @@
     padding-top: 10px;
   }
   
+/* alex's style */
+.a-line-through {
+  text-decoration: line-through;
+}
+.a-task-input{
+  border: none;
+  background-color: var(--bs-list-group-bg);
+}
