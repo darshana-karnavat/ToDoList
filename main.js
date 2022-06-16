@@ -11,10 +11,12 @@ const aAddingTodos = () => {
   aNewTask.setAttribute('class', 'list-group-item d-flex justify-content-between shadow');
   // Setting attribute 'id' to 'li'
   aNewTask.setAttribute('id', `${aTaskValue}`);
-
+  //Setting an Error Message
   const aErrorMessage = document.getElementById('error-message');
   const aErrorMessageText = document.createTextNode('You must write some Tasks!');
+  //Variable for cleaning error message
   const aClearError = () => (aErrorMessage.innerText = '');
+  // Error or Add Condition
   if (aTaskValue === '') {
     aClearError();
     aErrorMessage.appendChild(aErrorMessageText);
@@ -22,13 +24,16 @@ const aAddingTodos = () => {
     document.getElementById('a-tasks').appendChild(aNewTask);
     aClearError();
   }
+  //cleaning Input Field
   document.getElementById('a-my-input').value = '';
-
+  //Variable for Placeholder of Input
   const aInputText = document.getElementById(`input-text-${aTaskValue}`);
+  //Listener for Check
   const aTaskCheck = document.getElementById(`customCheck${aTaskValue}`);
   aTaskCheck.addEventListener('click', () => {
     aInputText.classList.toggle('a-line-through');
   });
+  //Listener for Edit Button
   const aEditBtn = document.getElementById(`a-edit-button-${aTaskValue}`);
   aEditBtn.addEventListener('click', () => {
     if (aEditBtn.innerText.toLowerCase() == 'edit') {
@@ -40,6 +45,7 @@ const aAddingTodos = () => {
       aInputText.setAttribute('disabled', 'disabled');
     }
   });
+  //Listener for Delete Button
   const aDeleteBtn = document.getElementById(`a-delete-button-${aTaskValue}`);
   aDeleteBtn.addEventListener('click', () => {
     aNewTask.remove();
