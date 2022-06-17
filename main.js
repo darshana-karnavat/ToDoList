@@ -22,6 +22,8 @@ const aAddingTodos = () => {
     aErrorMessage.appendChild(aErrorMessageText);
   } else {
     document.getElementById('a-tasks').appendChild(aNewTask);
+    // localStorage.setItem(aTaskValue, aNewTask.outerHTML);
+    // console.log(localStorage);
     aClearError();
   }
   //cleaning Input Field
@@ -51,7 +53,11 @@ const aAddingTodos = () => {
     aNewTask.remove();
   });
 };
-
+if (localStorage) {
+  console.log(Object.values(localStorage));
+  console.log(localStorage.length);
+  //   document.getElementById('a-tasks').appendChild(`${key}`);
+}
 /// Endet Here
 
 // stefano code below starts here //
